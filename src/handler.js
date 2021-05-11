@@ -65,6 +65,9 @@ const getNoteByIdHandler = (request, h) => {
     status: 'fail',
     message: 'catatan tidak ditemukan',
   });
+  
+  response.code(404);
+  return response;
 };
 
 const editNoteByIdHandler = (request, h) => {
